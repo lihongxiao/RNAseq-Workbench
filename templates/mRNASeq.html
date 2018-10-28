@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../static/img/favicon.ico">
+    <link href="../static/css/mainpage.css" rel="stylesheet">
+    <title>真核生物有参考基因组的转录组分析平台</title>
+    <script src="../static/js/jquery.min.js"></script>
+<link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../static/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../static/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+
+<body class="first">
+    <!-- Fixed navbar -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">RNAseq-Workbench</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'RNASeqForm' %}">RNA Sequencing</a></li>
+            <li><a href="#">Single-cell Sequencing</a></li>
+            <li><a href="#">Full-length Sequencing</a></li>
+            <li><a href="#">Tools</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown active">
+                <a href="./" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">username<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{% url 'mainpage' %}">Sign out</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <br><br><br><br>
+<div class="container">
+  <header class="page-header">
+    <h1 id="RNA Sequencing"> 真核生物有参考基因组的转录组分析平台</h1>
+  </header>
+
+
+<br>
+
+<div class="row">
+  <div class="col-xs-12 col-padding">
+    <div href="#" class="thumbnail zhenhebox">
+        <img src="../static/img/snowman.jpg" class="img-circle img-style" style="float:left">
+        <div style="float: right">
+            <div class="zhenhetext-tile">
+                <p>真核生物有参考基因组的转录组分析平台</p>
+            </div>
+            <div class="zhenhetext-content">
+                <p>基于已知的基因组序列和注释信息，以新一代高通量转录组测序（RNA-Seq）数据作为输入，根据测序数据与参考基因组的序列比对，识别新的转录位点（新基因）、新的可变剪接事件，并对新旧基因进行结构分析、表达定量和差异表达分析。
+                    测序数据质量评估；测序数据与所选参考基因组的序列比对；确定外显子/内含子的边界，分析基因可变剪接情况；发掘未注释的基因区和新的转录本；识别转录区的SNP位点；修正已注释的5'和3'端基因边界；定量基因和转录本表达
+                    水平，识别不同样品（组）之间显著差异表达的基因并对其进行功能注释和富集分析。 测序数据量为6Gb的6个小鼠样品分析耗时约5天。
+
+                </p>
+               <a href="{% url 'analysis' %}"> <button type="button" class="btn btn-primary" style="float:right;margin-top:23px;margin-right: 108px;">开始分析</button></a>
+            </div>
+        </div>
+
+         <div class="ddd">
+    <ul id="myTab" class="nav nav-tabs">
+   <li class="active">
+      <a href="#dota" data-toggle="tab">
+         应用领域
+      </a>
+   </li>
+   <li><a href="#lol" data-toggle="tab">分析平台介绍</a></li>
+        <li><a href="#function" data-toggle="tab">技术背景</a></li>
+         <li><a href="#example" data-toggle="tab">案例</a></li>
+   <li class="dropdown">
+      <a href="#" id="myTabDrop1" class="dropdown-toggle"
+         data-toggle="dropdown">其他
+         <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+         <li><a href="#storm" tabindex="-1" data-toggle="tab">风暴英雄</a></li>
+         <li><a href="#h300" tabindex="-1" data-toggle="tab">300英雄</a></li>
+      </ul>
+   </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+   <div class="tab-pane fade in active" id="dota">
+      <p style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">转录组是连接基因组遗传信息与生物功能的蛋白质组的纽带，转录水平的调控是最重要也是目前研究最广泛的生物体调控方式。转录组测序能够对样品任意时间点或任意条件下的转录组进行测序，拥有精确到单个核苷酸的分辨率。能够动态反映基因转录水平，同时鉴定和定量稀有转录本和正常转录本，并且提供样品特异的转录本序列结构信息。
+
+目前转录组测序技术已广泛应用于农学、医学等各个研究领域，包括动植物发育调控、环境适应、免疫互作、基因定位、物种遗传进化及肿瘤与遗传病检测等。</p>
+   </div>
+   <div class="tab-pane fade" id="lol">
+      <p style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">有参转录组测序分析平台可以进行标准分析和个性化分析，其中标准分析包括：差异表达基因分析、基因结构分析、新基因分析等。设定参数后点击提交进行分析，分析完成后在流程定制页面下生成标准化结题报告，实现一键式生成。</p>
+   </div>
+    <div class="tab-pane fade" id="function">
+      <p style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">分析平台分析流程以BMK自主研发的程序对测序数据进行质量评估为开始，包括数据量、数据质量Q30等的评估。
+
+做完数据质量评估之后，使用软件TopHat2将测序Reads比对到参考基因组上，TopHat2[1]是专门的RNA-Seq比对软件，它通过分割Reads二次比对参考基因组，不仅提高了测序数据的利用率，还为后续新可变剪接事件的预测提供了基础。
+
+基于各样品Reads与参考序列的序列的TopHat2比对结果，使用软件Cufflinks[2]进行转录本的拼接、表达定量。通过与已知基因组注释文件的比较，识别新的转录组区域，即新基因。通过软件BLAST[3]将新基因与各数据库进行序列比对，获取新基因的注释信息。
+
+基于各样品reads与参考基因组序列的TopHat2比对结果，使用软件SAMtools[4]识别测序样品与参考基因组间的单碱基错配，查找基因区潜在的SNP位点。
+
+根据与基因原有的剪接模型进行比较，使用Cufflinks软件从跨内含子Reads中预测新的可变剪接事件，并用软件SpliceGrapher[5]对其进行可视化。
+
+接着根据基因在不同样品中的表达水平，使用软件DESeq[6]或EBSeq[7]进行差异表达分析，并通过指标FDR和FC筛选差异表达基因。
+
+最后，提取各差异表达基因集的注释信息，使用Fisher精确检验、topGO[8]等进行差异表达基因集的GO节点或KEGG通路富集分析。
+      </p>
+   </div>
+    <div class="tab-pane fade" id="example">
+      <p style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">成功案例</p>
+   </div>
+   <div class="tab-pane fade" id="storm">
+      <p style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">
+      《风暴英雄》 是由暴雪娱乐公司开发的一款运行在Windows和Mac OS上的在线多人竞技PC游戏。</p>
+       <p> 游戏中的英雄角色主要来自于暴雪三大经典游戏系列：《魔兽世界》、《暗黑破坏神》和《星际争霸》。它是一款道具收费的游戏，与《星际争霸Ⅱ》基于同一引擎开发。
+      </p>
+   </div>
+   <div class="tab-pane fade" id="h300">
+      <p style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">《300英雄》是由上海跳跃网络科技有限公司自主研发，深圳中青宝互动网络股份有限公司运营的一款类DOTA网游。游戏以7v7组队对抗玩法为主，提供永恒战场和永恒竞技场两种经典模式任由玩家选择，并创新性地加入勇者斗恶龙、克隆战争等多种休闲娱乐玩法。
+      </p>
+   </div>
+</div>
+
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+    <br><br><br><br><br><br>
+<div class="container marketing">
+        <br><br>
+        <hr class=" featurette-divider">
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>
+                © 2017 Insect Genomics & Bioinformatics, Institute of Insect Science, ZheJiang univ. ·
+                <a href="#">Contact</a>
+                ·
+                <a href="{% url 'help' %}">Help</a>
+            </p>
+        </footer>
+    <br><br><br>
+    </div>
+   <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../static/js/jquery.min.js"><\/script>')</script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../static/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+﻿body{
+margin:0px;
+padding-top: 70px;
+}
+.btn.top{
+margin-bottom:-29px;
+}
+img{
+width:120px;
+}
+.thumbnail.blank{
+border:0px;}
+
+.col-xs-6.tupian{
+background-color:#eee;
+width:35%;
+height:250px;
+}
+.col-xs-6.tupian.float-right{
+float:right;
+}
+.jumbotron.about-background{
+    position: inherit;
+    background-image:url(../img/butterfly.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    zoom: 1;
+}
+.page-title-bar{
+background-color:#337ab7;
+padding-top: 0px;
+padding-bottom: 10px;
+margin-top:-39px;
+color:white;
+}
+h1{
+
+    color:inherit;
+}
+.col-padding{
+padding-left: 10px !important;
+    padding-right: 10px !important;}
+.thumbnail.box{
+width:485px;
+height:180px;
+}
+.text-tile{
+font-size:16px;
+font-weight:700;
+margin-right:30px;
+margin-top: 15px;
+margin-bottom: 10px;
+margin-left: 19px;
+}
+.text-content{
+
+    width: 288px;
+
+    margin-right: 0px;
+    margin-left: 21px;
+
+}
+.img-circle.img-style{
+float:left;
+height: 120px;
+margin-top: 30px;
+margin-left: 16px;
+
+}
+/*网页：真核生物有参考基因组的转录组分析平台 */
+/* 文本框格式*/
+.thumbnail.zhenhebox{
+width:950px;
+height:490px;
+}
+.zhenhetext-tile{
+text-align:center;
+font-size:19px;
+font-weight:600;
+margin-top: 9px;
+width: 792px;}
+.zhenhetext-content{
+width: 792px;
+height:143px;
+margin-top: 11px;
+
+}
+.ddd{
+
+height:300px;
+width:950px;
+margin-top: 215px;
+margin-left: -5px;
+}
+
+.first{
+padding-top:0px;}
+.move{
+margin-top:-21px;
+}
+
+/**Analysis-page*/
+.btn.btn-success.btn-blue{
+background-color:#337ab7;
+border-color:#337ab7;}
+.btn.btn-warning.btn-grey{
+background-color:#777;
+border-color:#777;
+}
+.panel-group.panel-size{
+margin-left:10px;
+margin-right:300px;}
+
+.container.top{
+height:500px;}
